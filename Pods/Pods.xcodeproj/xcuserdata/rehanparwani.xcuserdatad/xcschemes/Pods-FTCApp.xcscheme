@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F617F73A58E59AAC77898CBA5A3125ED"
-               BuildableName = "Pods-FTCApp.framework"
+               BuildableName = "Pods_FTCApp.framework"
                BlueprintName = "Pods-FTCApp"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

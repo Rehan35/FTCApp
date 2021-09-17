@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		ED4F11E326F426570007B7C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED4F11E226F426570007B7C5 /* Preview Assets.xcassets */; };
 		ED4F11EB26F437E70007B7C5 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4F11EA26F437E70007B7C5 /* Student.swift */; };
 		ED4F11ED26F43A740007B7C5 /* Tutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4F11EC26F43A740007B7C5 /* Tutor.swift */; };
+		ED4F11EF26F448EA0007B7C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED4F11EE26F448EA0007B7C5 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		ED4F11E426F426570007B7C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED4F11EA26F437E70007B7C5 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		ED4F11EC26F43A740007B7C5 /* Tutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tutor.swift; sourceTree = "<group>"; };
+		ED4F11EE26F448EA0007B7C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +58,6 @@
 				42CF3325EBB34E8F30A99BDC /* Pods-FTCApp.debug.xcconfig */,
 				8FBB657922860FF1F6B86068 /* Pods-FTCApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -86,6 +87,7 @@
 				ED4F11EA26F437E70007B7C5 /* Student.swift */,
 				ED4F11EC26F43A740007B7C5 /* Tutor.swift */,
 				ED4F11DF26F426570007B7C5 /* Assets.xcassets */,
+				ED4F11EE26F448EA0007B7C5 /* GoogleService-Info.plist */,
 				ED4F11E426F426570007B7C5 /* Info.plist */,
 				ED4F11E126F426570007B7C5 /* Preview Content */,
 			);
@@ -161,6 +163,7 @@
 			files = (
 				ED4F11E326F426570007B7C5 /* Preview Assets.xcassets in Resources */,
 				ED4F11E026F426570007B7C5 /* Assets.xcassets in Resources */,
+				ED4F11EF26F448EA0007B7C5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
