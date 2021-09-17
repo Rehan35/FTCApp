@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4159514D6BEBA1339A7798CA /* Pods_FTCApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2CF649134C27D7C7DCA4F07 /* Pods_FTCApp.framework */; };
 		ED4F11DC26F426550007B7C5 /* FTCAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4F11DB26F426550007B7C5 /* FTCAppApp.swift */; };
 		ED4F11DE26F426550007B7C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4F11DD26F426550007B7C5 /* ContentView.swift */; };
 		ED4F11E026F426570007B7C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED4F11DF26F426570007B7C5 /* Assets.xcassets */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		42CF3325EBB34E8F30A99BDC /* Pods-FTCApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FTCApp.debug.xcconfig"; path = "Target Support Files/Pods-FTCApp/Pods-FTCApp.debug.xcconfig"; sourceTree = "<group>"; };
+		8FBB657922860FF1F6B86068 /* Pods-FTCApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FTCApp.release.xcconfig"; path = "Target Support Files/Pods-FTCApp/Pods-FTCApp.release.xcconfig"; sourceTree = "<group>"; };
+		A2CF649134C27D7C7DCA4F07 /* Pods_FTCApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FTCApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4F11D826F426550007B7C5 /* FTCApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTCApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4F11DB26F426550007B7C5 /* FTCAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTCAppApp.swift; sourceTree = "<group>"; };
 		ED4F11DD26F426550007B7C5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4159514D6BEBA1339A7798CA /* Pods_FTCApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D55024E1F6719F6ED97EE27 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2CF649134C27D7C7DCA4F07 /* Pods_FTCApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0D9C29CB5558F694C246052 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				42CF3325EBB34E8F30A99BDC /* Pods-FTCApp.debug.xcconfig */,
+				8FBB657922860FF1F6B86068 /* Pods-FTCApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		ED4F11CF26F426550007B7C5 = {
 			isa = PBXGroup;
 			children = (
 				ED4F11DA26F426550007B7C5 /* FTCApp */,
 				ED4F11D926F426550007B7C5 /* Products */,
+				D0D9C29CB5558F694C246052 /* Pods */,
+				7D55024E1F6719F6ED97EE27 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED4F11E726F426570007B7C5 /* Build configuration list for PBXNativeTarget "FTCApp" */;
 			buildPhases = (
+				17A772E66C825CB152877B6A /* [CP] Check Pods Manifest.lock */,
 				ED4F11D426F426550007B7C5 /* Sources */,
 				ED4F11D526F426550007B7C5 /* Frameworks */,
 				ED4F11D626F426550007B7C5 /* Resources */,
+				C192BD262D476B158ADE43C1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -138,6 +165,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17A772E66C825CB152877B6A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FTCApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C192BD262D476B158ADE43C1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FTCApp/Pods-FTCApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FTCApp/Pods-FTCApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FTCApp/Pods-FTCApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ED4F11D426F426550007B7C5 /* Sources */ = {
@@ -272,6 +341,7 @@
 		};
 		ED4F11E826F426570007B7C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42CF3325EBB34E8F30A99BDC /* Pods-FTCApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -294,6 +364,7 @@
 		};
 		ED4F11E926F426570007B7C5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FBB657922860FF1F6B86068 /* Pods-FTCApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
