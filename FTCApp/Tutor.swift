@@ -15,10 +15,10 @@ class Tutor: ObservableObject, Identifiable{
     @Published var timesAvailable : [Date] = [Date]()
     @Published var listOfSubjects : [String] = [String]()
     @Published var numberOfHours : Int = 0;
-    @Published var numberOfStudents : Int = 0;
+    @Published var listOfStudents : [Student] = [Student]();
     var tutorId = UUID()
     
-    init(firstName: String, lastName: String, parentEmail: String, phoneNumber: Int, requiresEnglish: Bool, requiresMath: Bool, numberOfHours: Int, numberOfStudents: Int){
+    init(firstName: String, lastName: String, parentEmail: String, phoneNumber: Int, requiresEnglish: Bool, requiresMath: Bool, numberOfHours: Int){
         self.tutorFirstName = firstName
         self.tutorLastName = lastName
         self.email = parentEmail
@@ -33,7 +33,10 @@ class Tutor: ObservableObject, Identifiable{
         }
         
         self.numberOfHours = numberOfHours
-        self.numberOfStudents = numberOfStudents
+    }
+    
+    func numberOfStudents() -> Int{
+        return self.listOfStudents.count
     }
     
     
