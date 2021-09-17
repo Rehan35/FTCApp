@@ -31,6 +31,7 @@ class Tutor: ObservableObject, Identifiable{
         if requiresEnglish{
             subjects.append("English")
         }
+        
         self.numberOfHours = numberOfHours
     }
     
