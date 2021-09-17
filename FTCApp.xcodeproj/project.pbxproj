@@ -11,6 +11,8 @@
 		ED4F11DE26F426550007B7C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4F11DD26F426550007B7C5 /* ContentView.swift */; };
 		ED4F11E026F426570007B7C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED4F11DF26F426570007B7C5 /* Assets.xcassets */; };
 		ED4F11E326F426570007B7C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED4F11E226F426570007B7C5 /* Preview Assets.xcassets */; };
+		ED4F11EB26F437E70007B7C5 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4F11EA26F437E70007B7C5 /* Student.swift */; };
+		ED4F11ED26F43A740007B7C5 /* Tutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4F11EC26F43A740007B7C5 /* Tutor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		ED4F11DF26F426570007B7C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED4F11E226F426570007B7C5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ED4F11E426F426570007B7C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED4F11EA26F437E70007B7C5 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		ED4F11EC26F43A740007B7C5 /* Tutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tutor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			children = (
 				ED4F11DB26F426550007B7C5 /* FTCAppApp.swift */,
 				ED4F11DD26F426550007B7C5 /* ContentView.swift */,
+				ED4F11EA26F437E70007B7C5 /* Student.swift */,
+				ED4F11EC26F43A740007B7C5 /* Tutor.swift */,
 				ED4F11DF26F426570007B7C5 /* Assets.xcassets */,
 				ED4F11E426F426570007B7C5 /* Info.plist */,
 				ED4F11E126F426570007B7C5 /* Preview Content */,
@@ -138,7 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED4F11ED26F43A740007B7C5 /* Tutor.swift in Sources */,
 				ED4F11DE26F426550007B7C5 /* ContentView.swift in Sources */,
+				ED4F11EB26F437E70007B7C5 /* Student.swift in Sources */,
 				ED4F11DC26F426550007B7C5 /* FTCAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
