@@ -16,6 +16,8 @@ class Tutor: ObservableObject, Identifiable{
     @Published var listOfSubjects : [String] = [String]()
     @Published var numberOfHours : Int = 0;
     @Published var listOfStudents : [Student] = [Student]();
+    @Published var requiresMath : Bool = true;
+    @Published var requiresEnglish : Bool = true;
     var tutorId = UUID()
     
     init(firstName: String, lastName: String, parentEmail: String, phoneNumber: Int, requiresEnglish: Bool, requiresMath: Bool, numberOfHours: Int){
@@ -23,16 +25,9 @@ class Tutor: ObservableObject, Identifiable{
         self.tutorLastName = lastName
         self.email = parentEmail
         self.phoneNumber = phoneNumber
-        var subjects: [String] = [String]()
-        
-        if requiresMath{
-            subjects.append("Math")
-        }
-        if requiresEnglish{
-            subjects.append("English")
-        }
-        
         self.numberOfHours = numberOfHours
+        self.requiresMath = requiresMath
+        self.requiresEnglish = requiresEnglish
     }
     
     func numberOfStudents() -> Int{
