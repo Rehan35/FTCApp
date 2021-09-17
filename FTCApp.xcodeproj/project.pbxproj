@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D7D2DA026F441A40004B78B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D7D2D9F26F441A40004B78B /* GoogleService-Info.plist */; };
 		ED4F11DC26F426550007B7C5 /* FTCAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4F11DB26F426550007B7C5 /* FTCAppApp.swift */; };
 		ED4F11DE26F426550007B7C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4F11DD26F426550007B7C5 /* ContentView.swift */; };
 		ED4F11E026F426570007B7C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED4F11DF26F426570007B7C5 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D7D2D9F26F441A40004B78B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ED4F11D826F426550007B7C5 /* FTCApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTCApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4F11DB26F426550007B7C5 /* FTCAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTCAppApp.swift; sourceTree = "<group>"; };
 		ED4F11DD26F426550007B7C5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				ED4F11EC26F43A740007B7C5 /* Tutor.swift */,
 				ED4F11DF26F426570007B7C5 /* Assets.xcassets */,
 				ED4F11E426F426570007B7C5 /* Info.plist */,
+				7D7D2D9F26F441A40004B78B /* GoogleService-Info.plist */,
 				ED4F11E126F426570007B7C5 /* Preview Content */,
 			);
 			path = FTCApp;
@@ -134,6 +137,7 @@
 			files = (
 				ED4F11E326F426570007B7C5 /* Preview Assets.xcassets in Resources */,
 				ED4F11E026F426570007B7C5 /* Assets.xcassets in Resources */,
+				7D7D2DA026F441A40004B78B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
