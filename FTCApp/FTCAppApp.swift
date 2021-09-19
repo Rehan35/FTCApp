@@ -14,8 +14,10 @@ struct FTCAppApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     var body: some Scene {
+        let viewModel = AppViewModel()
         WindowGroup {
             ContentView()
+                .environmentObject(viewModel)
         }
     }
 }
