@@ -101,6 +101,7 @@ struct SignInView: View{
                         }
                         viewModel.signIn(email: email, password: password)
                         if (viewModel.auth.currentUser != nil){
+                            showSignUpView = true
                         }
                     }, label:{
                         Image(systemName: "arrow.right")

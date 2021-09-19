@@ -25,69 +25,97 @@ struct TutorSignUpView: View{
     
     @EnvironmentObject var viewModel : AppViewModel
     var body: some View{
-        Form{
-            Section(header: Text("Personal Information")){
-                VStack(alignment: .leading, spacing: 8, content: {
-                    TextField("First Name", text: $firstName)
-                        .font(.system(size: 20, weight: .semibold))
-                        .foregroundColor(Color(DARK_COLOR))
-                        .padding(.top, 5)
-                                
-                    Divider()
+        if showSignInView{
+            SignInView()
+        }else{
+            NavigationView{
+                Form{
+                    Section(header: Text("Personal Information")){
+                        VStack(alignment: .leading, spacing: 8, content: {
+                            TextField("First Name", text: $firstName)
+                                .font(.system(size: 20, weight: .semibold))
+                                .foregroundColor(Color(DARK_COLOR))
+                                .padding(.top, 5)
+                                        
+                            Divider()
+                            
+                            TextField("Last Name", text: $lastName)
+                                .font(.system(size: 20, weight: .semibold))
+                                .foregroundColor(Color(DARK_COLOR))
+                                .padding(.top, 5)
+                        })
+                    }
+                    Section(header: Text("Student Information")){
+                        TextField("Hours", text: $numberOfHours)
+                            .font(.system(size: 20, weight: .semibold))
+                            .foregroundColor(Color(DARK_COLOR))
+                            .padding(.top, 5)
+                            .keyboardType(.numberPad)
+                    }
                     
-                    TextField("Last Name", text: $lastName)
-                        .font(.system(size: 20, weight: .semibold))
-                        .foregroundColor(Color(DARK_COLOR))
-                        .padding(.top, 5)
-                })
-            }
-            Section(header: Text("Student Information")){
-                TextField("Hours", text: $numberOfHours)
-                    .font(.system(size: 20, weight: .semibold))
-                    .foregroundColor(Color(DARK_COLOR))
-                    .padding(.top, 5)
-                    .keyboardType(.numberPad)
-            }
-            
-            Section(header: Text("Account Information")){
-                TextField("Phone Number: (123)-456-7890", text: $phoneNumber)
-                    .font(.system(size: 20, weight: .semibold))
-                    .foregroundColor(Color(DARK_COLOR))
-                    .padding(.top, 5)
-                    .keyboardType(.numberPad)
-                TextField("Email: example@gmail.com", text: $email)
-                    .font(.system(size: 20, weight: .semibold))
-                    .foregroundColor(Color(DARK_COLOR))
-                    .padding(.top, 5)
+                    Section(header: Text("Account Information")){
+                        TextField("Phone Number: (123)-456-7890", text: $phoneNumber)
+                            .font(.system(size: 20, weight: .semibold))
+                            .foregroundColor(Color(DARK_COLOR))
+                            .padding(.top, 5)
+                            .keyboardType(.numberPad)
+                        TextField("Email: example@gmail.com", text: $email)
+                            .font(.system(size: 20, weight: .semibold))
+                            .foregroundColor(Color(DARK_COLOR))
+                            .padding(.top, 5)
 
-                SecureField("Password", text: $password)
-                    .font(.system(size: 20, weight: .semibold))
-                    .foregroundColor(Color(DARK_COLOR))
-                    .padding(.top, 5)
+                        SecureField("Password", text: $password)
+                            .font(.system(size: 20, weight: .semibold))
+                            .foregroundColor(Color(DARK_COLOR))
+                            .padding(.top, 5)
+                    }
+                    
+                    Section(header: Text("Subjects")){
+                        Toggle("Math", isOn: $requestsMath)
+                            .font(.system(size: 20, weight: .semibold))
+                            .foregroundColor(Color(DARK_COLOR))
+                            .padding(.top, 5)
+                        
+                        Toggle("English", isOn: $requestsEnglish)
+                            .font(.system(size: 20, weight: .semibold))
+                            .foregroundColor(Color(DARK_COLOR))
+                            .padding(.top, 5)
+                    }
+                }
+                .navigationBarTitle("Tutor Sign Up")
+//                .navigationBarItems(trailing:
+//                    HStack{
+//                        Menu{
+//                            Button("Student"){
+//                                studentSignUp = true
+//                                signUpBarTitle = "Student"
+//                            }
+//                            Button("Tutor"){
+//                                studentSignUp = false
+//                                signUpBarTitle = "Tutor"
+//                            }
+//                        } label: {
+//                            Image(systemName: "person.circle")
+//                        }
+//                    }
+//                )
             }
-            
-            Section(header: Text("Subjects")){
-                Toggle("Math", isOn: $requestsMath)
-                    .font(.system(size: 20, weight: .semibold))
-                    .foregroundColor(Color(DARK_COLOR))
-                    .padding(.top, 5)
+            Button(action: {
+                guard !email.isEmpty && !password.isEmpty else{
+                    return
+                }
+                viewModel.signUp(email: email, password: password)
+                if (viewModel.auth.currentUser != nil){
+                    showSignInView = true
+                }
+            }, label:{
+                Text("Sign Up")
+                    .font(.system(size: 20, weight: .bold))
+                    .foregroundColor(Color(.blue))
+                    .padding(.leading, 5)
+            })
                 
-                Toggle("English", isOn: $requestsEnglish)
-                    .font(.system(size: 20, weight: .semibold))
-                    .foregroundColor(Color(DARK_COLOR))
-                    .padding(.top, 5)
-            }
         }
-        Button(action: {
-            guard !email.isEmpty && !password.isEmpty else{
-                return
-            }
-        }, label:{
-            Text("Sign Up")
-                .font(.system(size: 20, weight: .semibold))
-                .foregroundColor(Color(.blue))
-                .padding(.leading, 5)
-        })
     }
 }
 
