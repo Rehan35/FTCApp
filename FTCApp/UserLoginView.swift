@@ -103,9 +103,16 @@ struct UserLoginView: View {
                 .padding(.top, 10)
             }
             .padding()
-            .padding(.top, -maxCircleHeight/1.6)
+            .padding(.top, -maxCircleHeight/2.5)
             .frame(maxHeight: .infinity, alignment: .top)
         }
+        .overlay(
+            HStack{
+                Text("New Member")
+                    .fontWeight(.bold)
+                    .foregroundColor(.gray)
+            }
+        )
     }
 }
 
