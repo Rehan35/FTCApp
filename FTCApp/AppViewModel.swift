@@ -10,11 +10,11 @@ import FirebaseAuth
 
 class AppViewModel: ObservableObject{
     
-    let auth = Auth.auth()
+    @Published var auth = Auth.auth()
     
-    var signedIn : Bool = false
+    @Published var signedIn : Bool = false
     
-    func signIn(email: String, password: String) -> Bool{
+    func signIn(email: String, password: String){
         auth.signIn(withEmail: email, password: password){ [weak self] result, error in
             
             guard result != nil, error == nil else{
@@ -24,10 +24,6 @@ class AppViewModel: ObservableObject{
                 self?.signedIn = true
             }
         }
-        if (self.signedIn){
-            return true
-        }
-        return false
     }
     
     func signUp(email: String, password: String){
@@ -40,6 +36,5 @@ class AppViewModel: ObservableObject{
             }
             
         }
-        
     }
 }

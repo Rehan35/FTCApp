@@ -17,6 +17,10 @@
 		ED4F11EF26F448EA0007B7C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ED4F11EE26F448EA0007B7C5 /* GoogleService-Info.plist */; };
 		ED8A9E8426F6DAFF00D429F7 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A9E8326F6DAFF00D429F7 /* AppViewModel.swift */; };
 		ED8A9E8626F6EB6C00D429F7 /* UserLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A9E8526F6EB6C00D429F7 /* UserLoginView.swift */; };
+		ED8A9E8826F7C66700D429F7 /* TutorSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A9E8726F7C66700D429F7 /* TutorSignUpView.swift */; };
+		ED8A9E9026F7C7CB00D429F7 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A9E8F26F7C7CB00D429F7 /* SignInView.swift */; };
+		ED8A9E9226F7C7EC00D429F7 /* StudentSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A9E9126F7C7EC00D429F7 /* StudentSignUpView.swift */; };
+		ED8A9E9426F7C82400D429F7 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A9E9326F7C82400D429F7 /* SignUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		ED4F11EE26F448EA0007B7C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ED8A9E8326F6DAFF00D429F7 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		ED8A9E8526F6EB6C00D429F7 /* UserLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginView.swift; sourceTree = "<group>"; };
+		ED8A9E8726F7C66700D429F7 /* TutorSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorSignUpView.swift; sourceTree = "<group>"; };
+		ED8A9E8F26F7C7CB00D429F7 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		ED8A9E9126F7C7EC00D429F7 /* StudentSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentSignUpView.swift; sourceTree = "<group>"; };
+		ED8A9E9326F7C82400D429F7 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +97,10 @@
 				ED4F11DB26F426550007B7C5 /* FTCAppApp.swift */,
 				ED8A9E8326F6DAFF00D429F7 /* AppViewModel.swift */,
 				ED8A9E8526F6EB6C00D429F7 /* UserLoginView.swift */,
+				ED8A9E9326F7C82400D429F7 /* SignUpView.swift */,
+				ED8A9E8F26F7C7CB00D429F7 /* SignInView.swift */,
+				ED8A9E8726F7C66700D429F7 /* TutorSignUpView.swift */,
+				ED8A9E9126F7C7EC00D429F7 /* StudentSignUpView.swift */,
 				ED4F11DD26F426550007B7C5 /* ContentView.swift */,
 				ED4F11EA26F437E70007B7C5 /* Student.swift */,
 				ED4F11EC26F43A740007B7C5 /* Tutor.swift */,
@@ -223,10 +235,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED8A9E8426F6DAFF00D429F7 /* AppViewModel.swift in Sources */,
+				ED8A9E8826F7C66700D429F7 /* TutorSignUpView.swift in Sources */,
 				ED4F11ED26F43A740007B7C5 /* Tutor.swift in Sources */,
 				ED4F11DE26F426550007B7C5 /* ContentView.swift in Sources */,
+				ED8A9E9226F7C7EC00D429F7 /* StudentSignUpView.swift in Sources */,
 				ED8A9E8626F6EB6C00D429F7 /* UserLoginView.swift in Sources */,
+				ED8A9E9426F7C82400D429F7 /* SignUpView.swift in Sources */,
 				ED4F11EB26F437E70007B7C5 /* Student.swift in Sources */,
+				ED8A9E9026F7C7CB00D429F7 /* SignInView.swift in Sources */,
 				ED4F11DC26F426550007B7C5 /* FTCAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
