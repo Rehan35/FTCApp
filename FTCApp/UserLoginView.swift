@@ -111,7 +111,34 @@ struct UserLoginView: View {
                 Text("New Member")
                     .fontWeight(.bold)
                     .foregroundColor(.gray)
+                Button(action:{}, label:{
+                    Text("Sign Up")
+                        .fontWeight(.bold)
+                        .foregroundColor(Color(BRIGHT_COLOR))
+                })
             }
+            ,alignment: .bottom
+        )
+        .background(
+            
+            HStack{
+                
+                Circle()
+                    .fill(Color(BRIGHT_COLOR))
+                    .frame(width: 70, height: 70)
+                    .offset(x: -30, y: 0)
+                
+                Spacer(minLength: 0)
+                
+                Circle()
+                    .fill(Color(DARK_COLOR))
+                    .frame(width: 110, height: 110)
+                    .offset(x: 40, y: 20)
+                
+            }
+            .offset(y: getSafeArea().bottom + 30)
+            , alignment: .bottom
+            
         )
     }
 }
@@ -125,5 +152,9 @@ struct UserLoginView_Previews: PreviewProvider {
 extension View{
     func getRect() -> CGRect{
         return UIScreen.main.bounds
+    }
+    
+    func getSafeArea() -> UIEdgeInsets{
+        return UIApplication.shared.windows.first?.safeAreaInsets ?? UIEdgeInsets(top: 9, left: 0, bottom: 0, right: 0)
     }
 }
