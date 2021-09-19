@@ -125,7 +125,7 @@ struct UserLoginView: View {
                 
                 Circle()
                     .fill(Color(BRIGHT_COLOR))
-                    .frame(width: 70, height: 70)
+                    .frame(width: 71, height: 71)
                     .offset(x: -30, y: 0)
                 
                 Spacer(minLength: 0)
