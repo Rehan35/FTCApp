@@ -17,32 +17,25 @@ struct SignUpView: View{
     @State var maxCircleHeight : CGFloat = 0
     @EnvironmentObject var viewModel : AppViewModel
     var body: some View {
-        //NavigationView{
-            VStack{
-                if studentSignUp{
-                    StudentSignUpView()
-                }else{
-                    TutorSignUpView()
+        Form{
+            NavigationLink(destination: StudentSignUpView(), label: {
+                HStack{
+                    Text("Student")
+                    Spacer()
+                    Image(systemName: "person.circle.fill")
                 }
-            }
-//            .navigationBarTitle("\(signUpBarTitle) Sign Up")
-//            .navigationBarItems(trailing:
-//                HStack{
-//                    Menu{
-//                        Button("Student"){
-//                            studentSignUp = true
-//                            signUpBarTitle = "Student"
-//                        }
-//                        Button("Tutor"){
-//                            studentSignUp = false
-//                            signUpBarTitle = "Tutor"
-//                        }
-//                    } label: {
-//                        Image(systemName: "person.circle")
-//                    }
-//                }
-//            )
-        //}
+                .font(.system(size: 20, weight: .bold))
+                .foregroundColor(.black)
+            })
+            
+            NavigationLink(destination: StudentSignUpView(), label: {
+                HStack{
+                    Text("Tutor")
+                    Spacer()
+                    Image(systemName: "person.crop.square.filled.and.at.rectangle.fill")
+                }
+            })
+        }
     }
 }
 

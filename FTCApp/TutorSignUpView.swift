@@ -83,22 +83,6 @@ struct TutorSignUpView: View{
                     }
                 }
                 .navigationBarTitle("Tutor Sign Up")
-//                .navigationBarItems(trailing:
-//                    HStack{
-//                        Menu{
-//                            Button("Student"){
-//                                studentSignUp = true
-//                                signUpBarTitle = "Student"
-//                            }
-//                            Button("Tutor"){
-//                                studentSignUp = false
-//                                signUpBarTitle = "Tutor"
-//                            }
-//                        } label: {
-//                            Image(systemName: "person.circle")
-//                        }
-//                    }
-//                )
             }
             Button(action: {
                 guard !email.isEmpty && !password.isEmpty else{
