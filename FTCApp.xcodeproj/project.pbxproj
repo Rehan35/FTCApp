@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4159514D6BEBA1339A7798CA /* Pods_FTCApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2CF649134C27D7C7DCA4F07 /* Pods_FTCApp.framework */; };
+		7DE3258426F7EC84006A2C8B /* DateSelectionUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE3258326F7EC84006A2C8B /* DateSelectionUI.swift */; };
 		ED4F11DC26F426550007B7C5 /* FTCAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4F11DB26F426550007B7C5 /* FTCAppApp.swift */; };
 		ED4F11DE26F426550007B7C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4F11DD26F426550007B7C5 /* ContentView.swift */; };
 		ED4F11E026F426570007B7C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED4F11DF26F426570007B7C5 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		42CF3325EBB34E8F30A99BDC /* Pods-FTCApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FTCApp.debug.xcconfig"; path = "Target Support Files/Pods-FTCApp/Pods-FTCApp.debug.xcconfig"; sourceTree = "<group>"; };
+		7DE3258326F7EC84006A2C8B /* DateSelectionUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectionUI.swift; sourceTree = "<group>"; };
 		8FBB657922860FF1F6B86068 /* Pods-FTCApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FTCApp.release.xcconfig"; path = "Target Support Files/Pods-FTCApp/Pods-FTCApp.release.xcconfig"; sourceTree = "<group>"; };
 		A2CF649134C27D7C7DCA4F07 /* Pods_FTCApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FTCApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4F11D826F426550007B7C5 /* FTCApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTCApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +110,7 @@
 				ED4F11EE26F448EA0007B7C5 /* GoogleService-Info.plist */,
 				ED4F11E426F426570007B7C5 /* Info.plist */,
 				ED4F11E126F426570007B7C5 /* Preview Content */,
+				7DE3258326F7EC84006A2C8B /* DateSelectionUI.swift */,
 			);
 			path = FTCApp;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED8A9E8426F6DAFF00D429F7 /* AppViewModel.swift in Sources */,
+				7DE3258426F7EC84006A2C8B /* DateSelectionUI.swift in Sources */,
 				ED8A9E8826F7C66700D429F7 /* TutorSignUpView.swift in Sources */,
 				ED4F11ED26F43A740007B7C5 /* Tutor.swift in Sources */,
 				ED4F11DE26F426550007B7C5 /* ContentView.swift in Sources */,
