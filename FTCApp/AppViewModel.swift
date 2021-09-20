@@ -10,31 +10,25 @@ import FirebaseAuth
 
 class AppViewModel: ObservableObject{
     
-    @Published var auth = Auth.auth()
-    
     @Published var signedIn : Bool = false
     
     func signIn(email: String, password: String){
-        auth.signIn(withEmail: email, password: password){ [weak self] result, error in
+        Auth.auth().signIn(withEmail: email, password: password){ (result, error) in
             
-            guard result != nil, error == nil else{
+            if error != nil{
+                print(error)
                 return
-            }
-            DispatchQueue.main.async{
-                self?.signedIn = true
+            }else{
+                self.signedIn = true
             }
         }
     }
     
     func signUp(email: String, password: String){
-        auth.createUser(withEmail: email, password: password){ [weak self] result, error in
+        Auth.auth().createUser(withEmail: email, password: password){ [weak self] result, error in
             guard result != nil, error == nil else{
                 return
             }
-            DispatchQueue.main.async {
-                self?.signedIn = true
-            }
-            
         }
     }
 }

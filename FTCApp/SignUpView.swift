@@ -18,24 +18,29 @@ struct SignUpView: View{
     @EnvironmentObject var viewModel : AppViewModel
     var body: some View {
         Form{
-            NavigationLink(destination: StudentSignUpView(), label: {
-                HStack{
-                    Text("Student")
-                    Spacer()
-                    Image(systemName: "person.circle.fill")
-                }
-                .font(.system(size: 20, weight: .bold))
-                .foregroundColor(.black)
-            })
-            
-            NavigationLink(destination: StudentSignUpView(), label: {
-                HStack{
-                    Text("Tutor")
-                    Spacer()
-                    Image(systemName: "person.crop.square.filled.and.at.rectangle.fill")
-                }
-            })
+            Section{
+                NavigationLink(destination: StudentSignUpView(), label: {
+                    HStack{
+                        Text("Student")
+                        Spacer()
+                        Image(systemName: "person.circle.fill")
+                    }
+                    .font(.system(size: 20, weight: .bold))
+                    .foregroundColor(.black)
+                })
+                
+                NavigationLink(destination: TutorSignUpView(), label: {
+                    HStack{
+                        Text("Tutor")
+                        Spacer()
+                        Image(systemName: "person.crop.rectangle")
+                    }
+                    .font(.system(size: 20, weight: .bold))
+                    .foregroundColor(.black)
+                })
+            }
         }
+        .navigationBarTitle("Sign Up")
     }
 }
 

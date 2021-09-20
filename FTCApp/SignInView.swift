@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import FirebaseAuth
 struct SignInView: View{
     let DARK_COLOR = "dark"
     let BRIGHT_COLOR  = "Yellow"
@@ -17,11 +17,10 @@ struct SignInView: View{
     @State var maxCircleHeight : CGFloat = 0
     
     @State var showSignUpView = false
+    @State var login = false
     @EnvironmentObject var viewModel : AppViewModel
     var body: some View {
-        if showSignUpView{
-            SignUpView()
-        }else{
+        NavigationView{
             VStack{
                 
                 GeometryReader{proxy -> AnyView in
@@ -33,7 +32,7 @@ struct SignInView: View{
                             maxCircleHeight = height
                         }
                     }
-                    
+                        
                     return AnyView(
                         ZStack{
                             Circle()
@@ -50,7 +49,7 @@ struct SignInView: View{
                     )
                 }
                 .frame(maxHeight: getRect().width)
-                
+                    
                 VStack{
                     Text("Sign In")
                         .font(.title)
@@ -58,35 +57,36 @@ struct SignInView: View{
                         .foregroundColor(Color(DARK_COLOR))
                         .kerning(1.9)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                    
+                        
                     VStack(alignment: .leading, spacing: 8, content: {
                         Text("User Name")
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                             .foregroundColor(.gray)
-                        
+                            
                         TextField("Email", text: $email)
                             .font(.system(size: 20, weight: .semibold))
                             .foregroundColor(Color(DARK_COLOR))
                             .padding(.top, 5)
+                            .keyboardType(.emailAddress)
                         
                         Divider()
                     })
                     .padding(.top, 25)
-                    
+                        
                     VStack(alignment: .leading, spacing: 8, content: {
                         Text("Password")
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                             .foregroundColor(.gray)
-                        
+                            
                         SecureField("Password", text: $password)
                             .font(.system(size: 20, weight: .semibold))
                             .foregroundColor(Color(DARK_COLOR))
                             .padding(.top, 5)
-                        
+                            
                         Divider()
                     })
                     .padding(.top, 20)
-                    
+                        
                     Button(action:{}, label:{
                         Text("Forgot Password?")
                             .fontWeight(.bold)
@@ -94,14 +94,20 @@ struct SignInView: View{
                     })
                     .frame(maxWidth: .infinity, alignment: .trailing)
                     .padding(.top, 10)
+                    .fullScreenCover(isPresented: $login, content: TutorHomeView.init)
                     
                     Button(action: {
                         guard !email.isEmpty && !password.isEmpty else{
                             return
                         }
-                        viewModel.signIn(email: email, password: password)
-                        if (viewModel.auth.currentUser != nil){
-                            showSignUpView = true
+                        Auth.auth().signIn(withEmail: email, password: password){ (result, error) in
+                            
+                            if error != nil{
+                                print(error)
+                                return
+                            }else{
+                                self.login = true
+                            }
                         }
                     }, label:{
                         Image(systemName: "arrow.right")
@@ -110,7 +116,7 @@ struct SignInView: View{
                             .padding()
                             .background(Color(DARK_COLOR))
                             .clipShape(Circle())
-                        
+                            
                             .shadow(color: Color(BRIGHT_COLOR).opacity(0.6), radius: 5, x: 0, y: 0)
                     })
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -126,7 +132,7 @@ struct SignInView: View{
                     Text("New Member")
                         .fontWeight(.bold)
                         .foregroundColor(.gray)
-                    Button(action:{showSignUpView = true}, label:{
+                    NavigationLink(destination: SignUpView(), label:{
                         Text("Sign Up")
                             .fontWeight(.bold)
                             .foregroundColor(Color(BRIGHT_COLOR))
@@ -135,16 +141,16 @@ struct SignInView: View{
                 ,alignment: .bottom
             )
             .background(
-                
-                HStack{
                     
+                HStack{
+                        
                     Circle()
                         .fill(Color(BRIGHT_COLOR))
                         .frame(width: 71, height: 71)
                         .offset(x: -30, y: 0)
-                    
+                        
                     Spacer(minLength: 0)
-                    
+                        
                     Circle()
                         .fill(Color(DARK_COLOR))
                         .frame(width: 110, height: 110)

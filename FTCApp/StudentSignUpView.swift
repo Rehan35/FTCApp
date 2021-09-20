@@ -11,6 +11,8 @@ struct StudentSignUpView: View{
     let DARK_COLOR = "dark"
     let BRIGHT_COLOR  = "Yellow"
     
+    @State var showSignInView = false
+    
     @State var firstName : String = ""
     @State var lastName : String = ""
     @State var requestsMath : Bool = false
@@ -20,6 +22,8 @@ struct StudentSignUpView: View{
     @State var phoneNumber : String = ""
     @State var email : String = ""
     @State var password : String = ""
+    
+    @EnvironmentObject var viewModel : AppViewModel
     var body: some View{
         Form{
             Section(header: Text("Personal Information")){
@@ -79,12 +83,19 @@ struct StudentSignUpView: View{
                     .padding(.top, 5)
             }
         }
-        Button(action: {}, label:{
+        Button(action: {
+            guard !email.isEmpty && !password.isEmpty else{
+                return
+            }
+            viewModel.signUp(email: email, password: password)
+            showSignInView = true
+        }, label:{
             Text("Sign Up")
                 .font(.system(size: 20, weight: .semibold))
                 .foregroundColor(Color(.blue))
                 .padding(.leading, 5)
         })
+        .fullScreenCover(isPresented: $showSignInView, content: SignInView.init)
     }
 }
 

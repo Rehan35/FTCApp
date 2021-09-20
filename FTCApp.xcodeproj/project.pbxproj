@@ -22,6 +22,7 @@
 		ED8A9E9026F7C7CB00D429F7 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A9E8F26F7C7CB00D429F7 /* SignInView.swift */; };
 		ED8A9E9226F7C7EC00D429F7 /* StudentSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A9E9126F7C7EC00D429F7 /* StudentSignUpView.swift */; };
 		ED8A9E9426F7C82400D429F7 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A9E9326F7C82400D429F7 /* SignUpView.swift */; };
+		ED8A9E9826F82B4600D429F7 /* TutorHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A9E9726F82B4600D429F7 /* TutorHomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		ED8A9E8F26F7C7CB00D429F7 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		ED8A9E9126F7C7EC00D429F7 /* StudentSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentSignUpView.swift; sourceTree = "<group>"; };
 		ED8A9E9326F7C82400D429F7 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		ED8A9E9726F82B4600D429F7 /* TutorHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorHomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				ED8A9E8526F6EB6C00D429F7 /* UserLoginView.swift */,
 				ED8A9E9326F7C82400D429F7 /* SignUpView.swift */,
 				ED8A9E8F26F7C7CB00D429F7 /* SignInView.swift */,
+				ED8A9E9726F82B4600D429F7 /* TutorHomeView.swift */,
 				ED8A9E8726F7C66700D429F7 /* TutorSignUpView.swift */,
 				ED8A9E9126F7C7EC00D429F7 /* StudentSignUpView.swift */,
 				ED4F11DD26F426550007B7C5 /* ContentView.swift */,
@@ -237,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED8A9E9826F82B4600D429F7 /* TutorHomeView.swift in Sources */,
 				ED8A9E8426F6DAFF00D429F7 /* AppViewModel.swift in Sources */,
 				7DE3258426F7EC84006A2C8B /* DateSelectionUI.swift in Sources */,
 				ED8A9E8826F7C66700D429F7 /* TutorSignUpView.swift in Sources */,

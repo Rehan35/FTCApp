@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var viewModel : AppViewModel
     var body: some View {
-        CheckBoxView()
+        SignInView()
+            .onAppear{
+                viewModel.signedIn = false
+            }
     }
 }
 
