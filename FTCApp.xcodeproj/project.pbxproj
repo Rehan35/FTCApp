@@ -23,6 +23,7 @@
 		ED8A9E9226F7C7EC00D429F7 /* StudentSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A9E9126F7C7EC00D429F7 /* StudentSignUpView.swift */; };
 		ED8A9E9426F7C82400D429F7 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A9E9326F7C82400D429F7 /* SignUpView.swift */; };
 		ED8A9E9826F82B4600D429F7 /* TutorHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A9E9726F82B4600D429F7 /* TutorHomeView.swift */; };
+		ED8A9E9A26F8F47700D429F7 /* AddAvailableDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8A9E9926F8F47700D429F7 /* AddAvailableDateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		ED8A9E9126F7C7EC00D429F7 /* StudentSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentSignUpView.swift; sourceTree = "<group>"; };
 		ED8A9E9326F7C82400D429F7 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		ED8A9E9726F82B4600D429F7 /* TutorHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorHomeView.swift; sourceTree = "<group>"; };
+		ED8A9E9926F8F47700D429F7 /* AddAvailableDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAvailableDateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		ED4F11CF26F426550007B7C5 = {
 			isa = PBXGroup;
 			children = (
+				ED8A9E9926F8F47700D429F7 /* AddAvailableDateView.swift */,
 				ED4F11DA26F426550007B7C5 /* FTCApp */,
 				ED4F11D926F426550007B7C5 /* Products */,
 				D0D9C29CB5558F694C246052 /* Pods */,
@@ -249,6 +252,7 @@
 				ED8A9E9226F7C7EC00D429F7 /* StudentSignUpView.swift in Sources */,
 				ED8A9E8626F6EB6C00D429F7 /* UserLoginView.swift in Sources */,
 				ED8A9E9426F7C82400D429F7 /* SignUpView.swift in Sources */,
+				ED8A9E9A26F8F47700D429F7 /* AddAvailableDateView.swift in Sources */,
 				ED4F11EB26F437E70007B7C5 /* Student.swift in Sources */,
 				ED8A9E9026F7C7CB00D429F7 /* SignInView.swift in Sources */,
 				ED4F11DC26F426550007B7C5 /* FTCAppApp.swift in Sources */,

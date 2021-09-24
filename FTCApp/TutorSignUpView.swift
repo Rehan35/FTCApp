@@ -26,6 +26,7 @@ struct TutorSignUpView: View{
     let dayList : [String] = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     
     @EnvironmentObject var viewModel : AppViewModel
+    @State var listOfDatesAvailable = [String]();
     var body: some View{        
         Form{
             Section(header: Text("Personal Information")){
@@ -49,6 +50,12 @@ struct TutorSignUpView: View{
                     .foregroundColor(Color(DARK_COLOR))
                     .padding(.top, 5)
                     .keyboardType(.numberPad)
+                NavigationLink(destination: AddAvailableDateView(listOfDatesAvailable: $listOfDatesAvailable), label:{
+                    Text("Add Avaible Times")
+                        .font(.system(size: 15, weight: .semibold))
+                    Spacer()
+                    Image(systemName: "calendar.badge.plus")
+                })
             }
             
             Section(header: Text("Account Information")){
